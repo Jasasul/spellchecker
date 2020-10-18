@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 def remove_repeating(word):
     # shortens any characters that repeats more than 2 times in row to 2 of them
     res = ''
@@ -87,3 +89,39 @@ def more_edit(words):
         add_results(transposition(word), results)
     
     return results
+
+def load_dict(file):
+    dictionary = []
+    with open(file, 'r', encoding='utf8') as f:
+        for line in f.readlines():
+            x = line.strip().split()
+            while x[0].isnumeric():
+              x.pop(0)
+            word = (x[0], x[1] + x[2] + x[3]) 
+            dictionary.append(word) 
+    
+    return dictionary
+
+def binary_search (arr, l, r, value): 
+    # returns index of a searched value in a dict
+    if r >= l: 
+        mid = l + (r - l) // 2
+        if arr[mid][0] == value: 
+            return mid
+        elif arr[mid][0] > value: 
+            return binary_search(arr, l, mid-1, value) 
+        else: 
+            return binary_search(arr, mid + 1, r, value) 
+
+    else: 
+        return None
+
+def in_dict(dictionary, word):
+    # return True if word found
+    x = binary_search(sorted_dict, 0, len(dictionary) - 1, word)
+    if x != None:
+        return True
+    return False
+
+dictionary = load_dict('word_dict.tsv')
+sorted_dict = sorted(dictionary, key=lambda x: x[0])
