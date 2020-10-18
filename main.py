@@ -60,3 +60,30 @@ def transposition(word):
                 results.append(transposed)
 
     return results
+
+
+
+def edit(word):
+    # 1 edit distance - additon, removal, substitution, transposition
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    results = []
+
+    #adding results from those 4 actions
+    add_results(addition(word, alphabet), results)
+    add_results(removal(word), results)
+    add_results(substitution(word, alphabet), results)
+    add_results(transposition(word), results)
+    
+    return results
+
+def more_edit(words):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    results = []
+    # if not found in first edit, continue
+    for word in words:
+        add_results(addition(word, alphabet), results)
+        add_results(removal(word), results)
+        add_results(substitution(word, alphabet), results)
+        add_results(transposition(word), results)
+    
+    return results
