@@ -67,7 +67,7 @@ def transposition(word):
 
 def edit(word):
     # 1 edit distance - additon, removal, substitution, transposition
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    alphabet = 'abcčdďefghijklmnopqrřsštťuvwxyzž'
     results = []
 
     #adding results from those 4 actions
@@ -97,7 +97,7 @@ def load_dict(file):
             x = line.strip().split()
             while x[0].isnumeric():
               x.pop(0)
-            word = (x[0], x[1] + x[2] + x[3]) 
+            word = (x[0], x[1]) 
             dictionary.append(word) 
     
     return dictionary
@@ -116,12 +116,60 @@ def binary_search (arr, l, r, value):
     else: 
         return None
 
-def in_dict(dictionary, word):
+def in_dictionary(dictionary, word):
     # return True if word found
     x = binary_search(sorted_dict, 0, len(dictionary) - 1, word)
-    if x != None:
-        return True
-    return False
+    return x
+
+def correct_1(dictionary, word):
+    avalible = []
+    index = in_dictionary(dictionary, word)
+    if index != None:
+        avalible.append(dictionary[index])
+        return avalible
+    else:
+        edit_1 = edit(word)
+        for option in edit_1:
+            index = in_dictionary(dictionary, option)
+            if index != None:
+                avalible.append(dictionary[index])
+        return avalible
+        # else:
+        #     edit_2 = more_edit(edit_1)
+        #     for option in edit_2:
+        #         index = in_dictionary(dictionary, option)
+        #         if index != None:
+        #             avalible.append(dictionary[index])
+        #     return avalible
+
+def correct_2(options, word):
+    edit_2 = more_edit(options)
+    for option in edit_2:
+        pass
+
+def most_frequent(options):
+    # finds a word from options with the highest frequency
+    best = options[0]
+    for option in options:
+        if int(option[1]) > int(best[1]):
+            best = option
+    return best
+
+def same_length(options, word):
+    # returns a list of word with the same length as input word
+    possibilities = []
+    for option in options:
+        if len(option[0]) == len(word):
+            possibilities.append(option)
+    return possibilities
+
+def evaluate(options, word):
+    if options == []:
+        return word
+    reduced = same_length(options, word)
+    if len(reduced) == 0:
+        return most_frequent(options)
+    return most_frequent(reduced)
 
 dictionary = load_dict('word_dict.tsv')
 sorted_dict = sorted(dictionary, key=lambda x: x[0])
