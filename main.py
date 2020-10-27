@@ -1,5 +1,3 @@
-from collections import OrderedDict
-
 def remove_repeating(word):
     # shortens any characters that repeats more than 2 times in row to 2 of them
     res = ''
@@ -79,7 +77,7 @@ def edit(word):
     return results
 
 def more_edit(words):
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    alphabet = 'abcčdďefghijklmnopqrřsštťuvwxyzž'
     results = []
     # if not found in first edit, continue
     for word in words:
@@ -166,10 +164,60 @@ def same_length(options, word):
 def evaluate(options, word):
     if options == []:
         return word
-    reduced = same_length(options, word)
+    reduced = []
     if len(reduced) == 0:
-        return most_frequent(options)
-    return most_frequent(reduced)
+        return most_frequent(options)[0]
+    return most_frequent(reduced)[0]
 
-dictionary = load_dict('word_dict.tsv')
-sorted_dict = sorted(dictionary, key=lambda x: x[0])
+def remove_prefix(word, special_chars):
+    # removes special characters at the start of the word
+    for i in range(len(word)):
+        if word[i] not in special_chars:
+            break
+    no_special = word[i:]
+    prefix = word[:i]
+
+    return prefix, no_special
+    
+
+def remove_suffix(word, special_chars):
+    # removes special characters at the end of the word
+    for i in range(len(word)):
+        if word[i] not in special_chars:
+            break
+    no_special = word[:i]
+    suffix = word[i:]
+
+    return suffix, no_special
+
+def clean_word(word):
+    # removes special characters at the start and then at the end of the word
+    special_chars = '"[](){}.,:;'
+    prefix, no_prefix = remove_prefix(word, special_chars)
+    suffix, no_suffix = remove_suffix(no_prefix, special_chars)
+    return prefix, no_suffix, suffix
+
+def join_prefix_suffix(prefix, word, suffix):
+    # joins the given prefix and suffix to the word
+    with_prefix = prefix + word
+    with_suffix = with_prefix + suffix
+    return with_suffix
+
+
+# dictionary = load_dict('word_dict.tsv')
+# sorted_dict = sorted(dictionary, key=lambda x: x[0])
+# with open('voda_errors.txt', 'r', encoding='utf8') as f:
+#     string = f.read()
+#     print(len(string))
+#     new_string = ''
+#     for word in string.split(' '):
+#         prefix, cleaned, suffix = clean_word(word)
+#         x = evaluate(correct_1(sorted_dict, word),word)
+#         new_word = join_prefix_suffix(prefix, x, suffix)
+#         new_string += f'{x} '
+# with open('corrected.txt', 'w', encoding='utf8') as f:
+#     f.write(new_string)
+
+word = 'hello world()'
+prefix, no_prefix = remove_prefix(word, '"[](){}.,:;')
+print(remove_suffix(no_prefix, '"[](){}.,:;'))
