@@ -181,17 +181,25 @@ def remove_prefix(word, special_chars):
     
 
 def remove_suffix(word, special_chars):
-    # removes special characters at the end of the word
-    for i in range(len(word)):
-        if word[i] not in special_chars:
+    # removes special characters at the end of the word\
+    has_suffix = False
+    for char in special_chars:
+        if char in word:
+            has_suffix = True
             break
-    no_special = word[:i]
-    suffix = word[i:]
-
-    return suffix, no_special
+    if has_suffix:
+        for i in range(len(word)):
+            if word[i] in special_chars:
+                break
+        no_special = word[:i]
+        suffix = word[i:]
+        return suffix, no_special
+    return '', word
 
 def clean_word(word):
     # removes special characters at the start and then at the end of the word
+    if len(word) == 0:
+        return '', word, ''
     special_chars = '"[](){}.,:;'
     prefix, no_prefix = remove_prefix(word, special_chars)
     suffix, no_suffix = remove_suffix(no_prefix, special_chars)
@@ -204,20 +212,17 @@ def join_prefix_suffix(prefix, word, suffix):
     return with_suffix
 
 
-# dictionary = load_dict('word_dict.tsv')
-# sorted_dict = sorted(dictionary, key=lambda x: x[0])
-# with open('voda_errors.txt', 'r', encoding='utf8') as f:
-#     string = f.read()
-#     print(len(string))
-#     new_string = ''
-#     for word in string.split(' '):
-#         prefix, cleaned, suffix = clean_word(word)
-#         x = evaluate(correct_1(sorted_dict, word),word)
-#         new_word = join_prefix_suffix(prefix, x, suffix)
-#         new_string += f'{x} '
-# with open('corrected.txt', 'w', encoding='utf8') as f:
-#     f.write(new_string)
+dictionary = load_dict('word_dict.tsv')
+sorted_dict = sorted(dictionary, key=lambda x: x[0])
+with open('voda_errors.txt', 'r', encoding='utf8') as f:
+    string = f.read()
+    print(len(string))
+    new_string = ''
+    for word in string.split(' '):
+        prefix, cleaned, suffix = clean_word(word)
+        x = evaluate(correct_1(sorted_dict, cleaned),cleaned)
+        new_word = join_prefix_suffix(prefix, x, suffix)
+        new_string += f'{new_word} '
+with open('corrected.txt', 'w', encoding='utf8') as f:
+    f.write(new_string)
 
-word = 'hello world()'
-prefix, no_prefix = remove_prefix(word, '"[](){}.,:;')
-print(remove_suffix(no_prefix, '"[](){}.,:;'))

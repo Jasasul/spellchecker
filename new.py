@@ -1,4 +1,2 @@
-var1 = 1
-var2 = 2
-
-print(f'This is: {var1} and {var2}')
+word = 'he'
+print(f'word; {word[:2]} suffix: {word[2:]}')
