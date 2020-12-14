@@ -214,9 +214,8 @@ def join_prefix_suffix(prefix, word, suffix):
 
 dictionary = load_dict('word_dict.tsv')
 sorted_dict = sorted(dictionary, key=lambda x: x[0])
-with open('voda_errors.txt', 'r', encoding='utf8') as f:
+with open('enigma_errors.txt', 'r', encoding='utf8') as f:
     string = f.read()
-    print(len(string))
     new_string = ''
     for word in string.split(' '):
         prefix, cleaned, suffix = clean_word(word)

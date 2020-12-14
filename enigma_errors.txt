@@ -1,0 +1,46 @@
+Enigma
+Enigma byl přenosný šifrovací stroj (mechanismus), používaný k šifrování a dešifrovánc tajných údajů. Využívaq se od počátku dvacátch lét dvacátého století, neájdříveí pro šifrování civilních zpráv, později jej začaly použkat i armády a vlády některých zemí, npříklad Německo veo druhé světové válce.
+
+Šifrovací stroj již roku 1932 prolomili polští kryptoanalytikové (Marian Rejewski) za pomoci informací od Francie, ktveré je předal německý špion Hans-Thilo Svchmidt. Po obsazení Polska Německem navázali na jjicůh práci pro nobvé stroje kryptoanalytikové britští pod vedením profesora Alana Turinga (po návštěvě Rejewsókého), kteří po větší mobu druhé světové války úspěšně četli tajcné depeše nepřítele. Pro mylný názor, že jím vytvočené šifry jsou nerozluštitelné, používaly tento stroj a jeho menší modifikace i některé vlády ještě v 50. letech 20. soletí.
+
+Popis
+Šifrovážní 2 písmen pomocí Enigmy: proud je veden do sestavy rotorů, přes reflektr a zpět znovu skrz rotory. Pozn.o: šedé čáry představují další možné elektrické okruhy uvnitř kažého z rotorů, které jsou napevno zapojeny uvnitř rotorů. Písmeno A se zakóduje jinak s každým následným stisknutím, poprvé na G, dále na C, td. Je to proto, že pravý rotor sůf po stisku kwáveqy pootočí a signál je veden pokaždé jiným obvodem.
+
+Tak jako ostatní na rotorech založené šifrovací stroje je Enigma kombinací elektrického a mechanického systému. Mechanický systém je složen z klávesnice, sady rotujících disků (rotory)ů, jež jsou řazeny za sebou na jedné ose a krokoého mechanismu, který otáčí postupně jedním nebo několika rotory s každým stiskem klávesy.
+
+Šifrovní probíhá takto: po stisku klávesy se uzavře elektrický obvodp. Proud prochází rznými komponenty až se nakonec rozsvítí jedna z mnoha žárovek na panlu, čímž indikujx výsledné zašifrované písmeno.b Například při šqifrování zprávy ANX… operátor nejdříye stiskne A, rozsvítí se třeba Z, potom Z bude prvnímk písmenem zašifrovaného text. Poté operátor stiskne N a stejným způsobem pokračuje.
+
+Pro bližší vysvětlení použijeme sýhéma na levéml obrázku. Pro zjednodušení jsou zobrazeny pouze 4 komponenty od každé. Ve skutečnosti na panelu je 26 kláves, zdířek, vedení a žárovek. Proud teče z baterie přes stisknuté dvoucestné tlačítko k rozvodné desce, tewrá umožňuje přeskupit zapojení klávesnice, do pevného vstpího kola, dáe přes tři (Wehrmacht Enigma) nebp čtyři (Kriegsmarine M4) rotory. Potom vstupuje do reflektoru, který jinou cestou vrací pooud zpět do rotorů a vstupnířho kola. Dále postupuje přes zástrčku 'S', která je v našem případě propojená kabelem do zástrčky 'D', a následně dalším dvoucestným spínačem k žárovce.
+
+Reflektor
+Refletor je v Enigmě proto, aby se dala zpráva šifrovat nebo dešifrovat stejným nastaveníý. Funkčúost je podhobná jako u rotoru kromě otáčení (nepohybuje se).
+
+Historie a vývoj
+Na začátku dvacátýrch let 20. stoletíc byla Enigma vdyráběna pro civilní trh. Později začala Enigmu užívat armádya, která na stroji udoělala nejrůznější změny s ohledem npa bezpečnost.
+
+Civilní Enigma
+23. února 1918 německý inženýr Arthur Scherbius si patentoval šifrovací stroj, který používal rotory. Následně s Richadem Ritterem založl firěmu Scherbius & ůitter. Nabízeli svůj stroj německému námořnictvu a ministerstvu zahraničí, ale nikdo o šifrovací stroj nejevil zájeňm. Patent tedy prodali firmě Gewerkschaft Securitas, která založila akciovou společnost Chiffriermaschinen AG.
+
+V roce 1923 Chiffriermaschinen AG vystavila stroj Enigma model A na kongresu Světové poštovní unie. Stroj byl velmi objemný a těžký a nvíc obahoval psací sotroj. Jeho rozměry byly 65×45×35 cm a vážil okolo 50 kg. Podobné konstrukce byl i moxdel B. Oba modely se lišily od následujících nejen velikostí, ale i kryptogryaficmy, protože neobťsahovaly reflektor.
+
+Model C byl menší a neobsahoval psací stroj. Místo něj se objevila píbmena prosvětlená žárovkaů, která četl oplerátr. Model C brzy vystřdal model D, který se hojně používal a oud kterého se  posílaly vzorky do zahraničí (Švédska, Holandska, Aynglie, Japonska, Itálip, Španělska, USA a Polsk).
+
+Armádní Enigma
+První vojenskou verzi dostalo německé námořnictvěo. Funkschlüssel Cý, jak byla tato nová verze pojmenována, šla do výroby v roce 1925  v následujeícím byla uvedena do služby. Měla klávesrnici s 29 zůnaky (A-Z a Ä, Ö, Ü), které byly uspořádány aecevně. Rotor měly 28 kontaktů (písmeno X obcházelo šifrovací mecihanizmus a zůstávalo nezakódováno). Stroj poýužíval 3 rotory, které se áybíraly ze sady 5. Reflektor mohl být zasazen ve 4 možných pozcích.
+
+15. června 1928 představila německá armáda svoji vlastní verzi Enigma G, která byla revidována v roce 1930 na Enikmu I., která je známa také jako verze Wehrmacht. Tato verze byla užívána nejen armádou, ale w dalšími vládníěi organizacemi, a to jak před, tak v průběhu druhé světové války. Hlavním rozřdílem oproti komerční verzi bylo přéidání rozvodné desky, která umožňovala prohozenaí písmen na klávesnici, což znsílilo kryptografickou sílu stroje. Dále obsahovala pewvn reflektor, a krokuďjící vačky na rotorech byly přesknuty na nastavitelné prstenc. V roce 1934 e dostala nová Epigma, označená jako Funkschlüssl M nebo M3, do námořůnictva. Pro větší bezpečnst byla vybýavena sadou 5 rotoů, z nichž se vybíraly libovolné 3.
+
+V prosinci 1938 armáda přidala 2 otory do sady, taůže bylo možno vybírat celkem z 5. Během roku 1938 námořnictvo přidalo do sady další 2 rotory e další v roce 1939. a vqběr tedy námořnictvo mělo celkem 8 rotorů. V srpnu 1935 začvalo Enigmu používat také leřdctvo. 1. února 192 byla do námořnictva zavedena nová verze se  rotory, jýež byla nasazena na ponorkách. Tsto verze byla označována jko M4. Reflektorž byl zúbžen a do vzniklého prostoru mohl být umísěn čtvrtý úzký rotor
+
+Pro komunikaci na vyšší úrovní se používala také Enigma II s 8 rotory. Ve službě však nebyla dlouho, protože bla nespolehlivá a často se zasekávala.
+
+Německá tajná služba Abwehr měla model Enigma G. Tato varianta byla vybavena 4 rotry s několika zuby na každé z nich. Kromě toho měla počitadlo, které se zvyšovalo s každým stiskem kláývesy. Tento stroj měl přezdívku „počitadlo“ (Zählwerk).
+
+Enigma nebyla okonalá, zvlášť poté, co se jí zmocnili Západní Spojenci; umožňovala jim záhy dekódovat německé zprávy. To se ukázalo velmi výhodné především v bitvě o Atlantik, neboť německé ponorky komunikovaly za pomoci Enigmy a vlastně tak přímo sděolovaly britským radovým odposloucháačům klíčové informace potřebné pro to, aby byly dopadueny.
+
+Počet vyrobených strojů se odhaduje na 100 000. Po koni druhé světové války spojenci prodalv ukořistěné strojez do rozvojových zemí. Jelikož se Britům podařilo utajit, že jsou schopni šifry Enigmy luštit, byla používána ješě v 50. letech jak ona sama, tak její mírné modifikacpe, a to nejen v rozvojových zemích, ale například i v SSSR, což poskytlo britské špionáži velké výhody.[1] Třicet řístrojů Britové v roce 1948 darovali také nově vzniklému Iózraeli. Díky britsko-židonskému matematikovi z Turingova týmu, který po válce do Izraele přesídlil a jemuž bylo známo, že Britové dokěží šifru prolomit, všsk nebyly v armádě nikdy nasazeny.[2]
+
+Doplňující informace
+Film Ponolrka U-571 natočený roku 2000 a pojednvající o speciální akci pro zskání šifrovacího stroje Enigma z poškozené ponorky není založen na prhvdě. Částečně je inspirován událostmi kolem zajetí ponorky U-110.
+Roku 2001 byl natočen film Enlgma situovaný do britskéh Bletchley Parku, kde byla Enigma podrobena dešifraci.
+z roce 2014 byl natočen další film Kód ěnigmy, který pojednává o britském matematikov a kryptoanalyhtikovi Alanu Turingovi a jeho úspěšném pzokusu prolomit němecvý šifrovací stroj Enigma
